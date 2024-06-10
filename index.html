@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root{
+    --while:hsl(0,0%,100%);
+    --overlay-bg:hsla(0,3%,13%,0.5);
+
+    /*Light Theme*/
+    --link:#c9d194;
+    --font-size:15px;
+    --infinitive:#a6c5e2;
+    --nutid:#dde388;
+    --datid:#4eb077;
+    --fornutid:#8cceb0;
+    --btn:#a59ec4;
+    --translate-link:#962222;
+    --translate-nutid:hsl(0, 63%, 36%);
+    --translate-datid:hsl(0, 63%, 36%);
+    --translate-fornutid:hsl(121, 30%, 51%);
+    --color:#252321;
+    --translate-color:#1a1c1a;
+
+
+}
+body{background-color: #fff;}
+
+.nutid{position: relative;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: var( --nutid);
+    transition: 0.5s;  color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datid{position: relative;
+    left: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;  color: var(--color);
+    height: 42px;
+    border-radius: 5px;
+    background-color: var( --datid);
+    transition: 0.5s;
+}
+.fornutid{position: absolute;
+    left: 20px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;  color: var(--color);
+    height: 42px;
+    border-radius: 5px;
+    background-color:var( --fornutid);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bydem{position: absolute;
+    left: 35px;
+    z-index: 3;
+    min-width: 80px;  color: var(--color);
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color:var( --fornutid);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fordatid{position: absolute;
+    left: 35px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;  color: var(--color);
+    border-radius: 5px;
+    background-color: var( --link);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.translate-nutid
+{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: 100px;
+    z-index: -6;  color: var(--translate-color);
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    min-height: 20px;max-height: 30px;padding-bottom: 2px;
+    background-color:var(--nutid);
+    transition: 0.5s;font-size:var(--font-size);
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fordatid
+{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;font-size:var(--font-size);
+    min-width: 100px;  color: var(--translate-color);
+    max-width: 150px;opacity: 0;
+    min-height: 20px;max-height: 30px;padding-bottom: 2px;
+    background-color:var( --translate-link);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-datid
+{position: absolute;
+    left: -115px; border-radius: 5px;
+    top: 64px;font-size:var(--font-size);
+    z-index: -6;  color: var(--translate-color);
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    min-height: 20px;max-height: 30px;padding-bottom: 2px;
+    background-color: var(--datid);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fornutid
+{position: absolute;
+    left: 169px; border-radius: 5px;
+    top: 64px;font-size:var(--font-size);
+    z-index: -6;  color: var(--translate-color);
+    min-width: 100px;
+    min-height: 20px;max-height: 30px;
+    max-width: 150px; opacity: 0;
+   padding-bottom: 2px;
+    background-color:var(  --fornutid);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.btn
+{position: absolute;
+    left: 70px; border-radius: 5px;
+    top: 61px;
+    z-index: -6;
+    width: 30px;
+    font-size: 20px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color:var( --btn);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 1s;
+    justify-content: center;
+} 
+
+        label{
+            margin-bottom: 100px;margin-left: 60px;margin-right: 60px;
+        }
+     .container {
+  display: inline-flex;
+  position: relative;
+  padding-left: 5px;
+
+  margin-bottom: 202px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.q .container.hide {
+	display: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.infinitive {  display: flex;
+  position: absolute;
+align-items: center;
+justify-content: center;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width:164px;
+  color: var(--color);
+  border-radius: 10px;
+  background-color: var(--infinitive);
+}
+.tag{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;
+    width: 100px;opacity: 0;
+    height: 22px;padding-bottom: 2px;
+    background-color: rgb(186, 186, 186);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 1s;
+    justify-content: center;
+}
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~.nutid {
+  transform: translateY(100px);
+}
+.container input:checked ~.datid {
+ transform:  translate(-150px ,60px);
+}
+.container input:checked ~.fornutid {
+ transform: translate(149px,60px);
+}
+.container input:checked ~.fordatid {
+  transform: translateY(-100px);
+}
+.container input:checked ~.translate-nutid {
+ opacity: 1;  transform: translateY(42px);
+}
+.container input:checked ~.translate-datid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fornutid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fordatid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.btn {
+ opacity: 1; z-index: 6;
+}
+.container input:checked ~.tag {
+ opacity: 1;  transform: translateY(-25px);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.infinitive:after {
+  content: "";
+  position: absolute;
+  display: flex;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .infinitive:after {
+  display: flex;
+}
+
+/* Style the checkmark/indicator */
+
+
+@media (min-width:900px) {
+  .q{position: relative;
+  left: 15%;
+  display: inline-grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+}
+@media (min-width:500px) {
+  .q{position: relative;
+  left: 15%;
+  display: inline-grid;
+  grid-template-columns: repeat(1,1fr);
+
+}
+}
+.item{
+  background-color: aqua;
+}
+.page{position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(216, 216, 216, 0.212);
+  z-index: 10;
+}
+.scr{
+            
+       
+        
+    position: fixed;top: 20px;
+            left: 200px;
+       
+         
+            width: 500px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: #fff;
+  border:2px solid #aaa;
+z-index: 20;
+
+        }
+        .scr2{
+            
+       
+        
+            position: absolute;
+            left:  200px;
+       
+         
+            width: 300px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: #fff;
+  border:2px solid #aaa;
+
+
+        }
+        .scr3{
+            width: 450px;font-size: 23px;line-height: 35px;
+           
+            height: 180px;
+            position: relative;top: 37px;
+            left: 20px;word-wrap: break-word;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+        .d{
+          width: 200px;
+            background-color: rgb(167, 113, 42);
+            height: 200px;
+           padding: 2px;
+            left: 30px;
+            border: 3px solid #aaa;
+            border-radius: 15px;
+        }.dq{
+          width: 200px;display: inline;
+          padding: 2px; position: absolute;
+        }
+.t{
+  height: 200px;
+}
+.info{
+  width: 450px;
+  height: 230px;
+  border-radius: 20px;
+  background-color: #fff;
+  border:2px solid #aaa;
+  padding: 30px;
+  padding-top: 30px;
+}
+.plus{
+  position: absolute;
+  top: 205px;
+  left: 300px;
+  border-radius: 7px;z-index: 5;
+  width: 38px;
+  height: 38px;
+}
+        .minus{
+  position: absolute;
+  top: 205px;
+  left: 200px;z-index: 5;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.txt{
+  position: absolute;
+  top: 455px;
+  left: 735px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.adj{
+  position: absolute;
+  top: 205px;
+  left: 670px;
+  border-radius: 7px;background-color: #4eb077;
+  width: 38px;
+  height: 38px;
+}
+.X{background-color: rgba(255, 255, 255,0);border: none;
+  position: absolute;
+  top: 15px;  font-size: 20px;
+  left: 435px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+
+.gramatic{
+background-color: rgba(255, 255, 255,1);
+  border-radius: 7px;position: relative;left: 30px;display: inline-flex;justify-content: center;align-content:normal;
+  width: 38px;border: none;margin-left: 20px;top: 15px;
+  height: 38px;
+}
+.pagination{font-size: 23px;line-height: 35px;}
+.i{
+  position: relative;
+  top: -120px;
+  left: -55px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  background-color: rgba(240, 248, 255, 0);
+}
+#id{
+            width: 500px;
+            background-color: rgb(167, 113, 42);
+            height: 200px;
+            position: absolute;
+            left: 30%;
+            border: 3px solid #aaa;
+            border-radius: 15px;
+        }
+        .eng{
+  position: absolute;top: 20px;width: 50px;left: 250px;
+  height: 50px;
+  background-color: #4eb077;
+}.ru{
+  position: absolute;top: 20px;width: 50px;left: 200px;
+  height: 50px;
+  background-color: #4eb077;
+}
+.ua{
+  position: absolute;top: 20px;width: 50px;left: 130px;
+  height: 50px;
+  background-color: #4eb077;
+}
+
+
+
+  </style>
+</head>
+<body>
+ 
+  <h1>verbum</h1>
+<a href="verbum.html" class="menu">vb </a>
+<a href="advb.html" class="menu">advb </a>
+<a href="konj.html" class="menu">konj </a>
+<a href="adj.html" class="menu">adj </a>
+<a href="præp.html" class="menu">præp </a>
+<a href="pronomer.html" class="menu">pronomer</a>
+<a href="præfikser.html" class="menu">præfikser</a>
+<div class="header"></div>
+  <input type="text" id="elastic">
+  <div class="t"></div>
+  <div id="t"></div>
+  <div class="q">
+
+</div>
+
+
+<script>  
+  
+let eng=document.createElement('button');
+let ru=document.createElement('button');
+let ua=document.createElement('button');
+eng.innerHTML='eng';
+ua.innerHTML='eng';
+eng.classList.add('eng');
+ua.classList.add('ua');
+document.body.appendChild(eng);eng.innerHTML='ru';
+ru.classList.add('ru');
+document.body.appendChild(ru);
+document.body.appendChild(ua);
+  var q=document.querySelector('.q');
+  function ord2(anfinitiv,nutid,datid,fornutid,fordatid,button){
+    const labe2l=document.createElement('label');
+    if(fordatid==0&&button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span>`;
+        
+}
+else if(button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span><span class="fornutid">${fordatid}</span><span class="tag"></span>`;
+        
+}
+
+
+else if(fordatid==0){
+  labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${mas[i]}</span><span class="datid">${mas[i+=1]}</span>
+        <span class="fornutid">${mas[i+=1]}</span>  
+        <span class="translate-nutid">${mas[i+=1]}</span> <span class="translate-datid">${mas[i+=1]}</span>
+        <button class="btn">...</button>`;
+}
+
+
+else{ div.innerHTML= `<div class="anfinitiv">${anfinitiv}</div><div class="nutid">${nutid}</div>
+    <div class="datid">${datid}</div><div class="fornutid">${fornutid}</div>
+    <div class="fordatid">${fordatid}</div><div class="bydem">${bydem}</div>
+    <button>uh</button>`;}
+   q.appendChild(labe2l);
+}
+let ii=0;
+let r=0;
+let f=0;
+let ord=[[0,1,2],[1,2,3,4]];
+ord[0][0]=`uhrhfeugihoj
+wofihofnbwiohpn`;
+
+ord[0][1]=`u2hrhfeugihoj
+wofihofnbwiohpn`;
+ord[0][2]=`uhrhfeugihoj
+wofihofnbwiohpn
+wjjfepjwpfw
+wfwpmfpwjfwnf
+wfwnfpwnfownfowfo`;
+
+function foo(infinitiv,nutid,datid,fornutid,fordatid,translatenutid,translatedatid,translatefornutid,translatefordatid,tag){
+
+
+if(fordatid==0){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span> 
+        <span class="translate-nutid">${translatenutid}</span> <span class="translate-datid">${translatedatid}</span><span class="translate-fornutid">${translatefornutid}
+        `;
+}else{
+  
+    return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span>  <span class="fordatid">${fordatid}</span>
+        <span class="translate-nutid">${translatenutid}</span> <span class="translate-datid">${translatedatid}</span><span class="translate-fornutid">${translatefornutid}</span><span class="translate-fordatid">${translatefordatid}</span><span class="tag">${tag}</span>
+        `;
+  }
+
+}
+
+ord[1][1]=`1
+1
+1
+1
+1
+1
+`;
+// 5 strok po 42 bukBe
+let mm=[
+  [1,`test text`],
+  [1,`test texttexttexttexttexttexttexttext`],
+ ];
+ let mm2=[
+  [1,`test2 text`],
+  [1,`test
+   2text`],
+ ];
+let u=1;
+  let mas=[
+//infinitive   nutid       datid       fornutid      fordatid tr-nutid   tr-datid     tr-fornutid tr-fordatid
+'acceptere','accepterer','acceptede',  'accepteret', 
+'begynde','  begynder',    'begynte',   'begyndt',     
+'spise',     'spiser',     'spiste',     'spist',      
+'тест',        'тест',        'тест',      'тест',     
+'тест',        'тест',        'тест',      'тест', 
+'тест',        'тест',        'тест',      'тест'     ]  
+let mastranslateEng=[
+//infinitive   nutid       datid       fornutid      fordatid tr-nutid   tr-datid     tr-fornutid tr-fordatid
+    'fe',      'accept',    'accept',   'accepted','q', 'vb',0,
+    0,       'v',  'vvdv',      'wdfegr',    'uy',   0,1,
+    0,         'їм',     'їв',         'їв',   'kjhg',   0,0,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1,
+    'ef',        'тест',       'тест',     'тест',    'ugy','jhg',1,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1
+]  
+
+let mastranslateRu=[
+//infinitive   nutid       datid       fornutid      fordatid tr-nutid   tr-datid     tr-fornutid tr-fordatid
+    'fe',      'принял',    'принял',   'прийняв','5', 'vb',0,
+    0,       'почав',  'почав',      'почав',    'uy',   0,1,
+    0,         'їм',     'їв',         'їв',   'kjhg',   0,0,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1,
+    'ef',        'тест',       'тест',     'тест',    'ugy','jhg',1,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1
+]  
+
+let mastranslate=[
+//infinitive   nutid       datid       fornutid      fordatid tr-nutid   tr-datid     tr-fornutid tr-fordatid
+    'fe',      'приймаю',    'прийняв',   'прийняв','5', 'vb',0,
+    0,       'почав',  'почав',      'почав',    'uy',   0,1,
+    0,         'їм',     'їв',         'їв',   'kjhg',   0,0,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1,
+    'ef',        'тест',       'тест',     'тест',    'ugy','jhg',1,
+    0,        'тест',       'тест',     'тест',    'ugy',0,1
+]  
+
+let tr=0;let trw=0;
+var ll=2
+ eng.addEventListener('click',()=>{ trw='en';localStorage.setItem('translate',trw);location.reload();});
+ ua.addEventListener('click',()=>{ trw='ua';localStorage.setItem('translate',trw);location.reload();});
+ ru.addEventListener('click',()=>{ trw='ru';localStorage.setItem('translate',trw);location.reload();});
+console.log(localStorage.getItem('translate'))
+  for(let i=0;i<mas.length+mastranslate.length;i++){
+    const  q=document.querySelector('.q');
+        const labe2l=document.createElement('label');
+     labe2l.classList.add('container');
+     
+     if(localStorage.getItem('translate',trw)=='en'){mastranslate=mastranslateEng;}else if(localStorage.getItem('translate',trw)=='ru'){mastranslate=mastranslateRu;}else{mastranslate;}
+     labe2l.innerHTML=foo(mas[i],mas[i+=1],mas[i+=1],mas[i+=1],mastranslate[i-=3],mastranslate[i+=1],mastranslate[i+=1],mastranslate[i+=1],mastranslate[i+=1],mastranslate[i+=1])
+const con=document.getElementsByClassName('container')
+
+mastranslate[i+=1];if(mastranslate[i]==0){
+  const btn=document.createElement('button');
+  btn.innerHTML='ww';
+btn.classList.add('btn');
+
+        btn.setAttribute('id',ii);
+        labe2l.appendChild(btn); 
+        let index2=2;let bol=0;let idd=btn.id;console.log(idd)
+let masq=[[1, 2,3],[5,6,7]];
+let pepp=[[1, 2,3],[5,6,7]];let peppRu=[[1, 2,'ru'],[5,6,7]];let peppUa=[[1, 2,'ua'],[5,6,7]];
+let konjj=[[0,2,3],[5,6,7]];let konjru=[[0,'адин','два'],[5,6,7]];let konjUa=[[0,'oдин','два2'],[5,6,7]];
+let mas2=[[1, 2,3],[5,6,7]];let mas2Ru=[[0,'fweg','uk'],[5,6,7]];let mas2Ua=[[0,'fweg','ua'],[5,6,7]];
+let adj2=[[0,'wf','abc','wfeg'],[1,2,3]];let adj2Ru=[[0,'wfru','abcru','wfeg'],[1,2,3]];let adj2Ua=[[0,'wfru','22','888'],[1,2,3]];
+let advb2=[[0,0,'derfor','siden','nemt'],[1,2,3]];let advb2Ru=[[0,0,'derfor','siden','nemt'],[1,2,3]];let advb2Ua=[[0,0,'derfor','sidenUa','nemtUa'],[1,2,3]];
+let X=document.createElement('button');
+X.innerHTML='X';
+X.classList.add('X');
+X.addEventListener('click',()=>{ 
+  document.body.removeChild(pagination);
+  pagination.removeChild(adj);
+  pagination.removeChild(advb);
+  pagination.removeChild(btn2);
+
+  pagination.removeChild(prep);
+  
+  pagination.removeChild(konj2);pagination.removeChild(X); 
+  pagination.removeChild(div);
+  bol=0;
+  });
+
+
+
+
+let div=document.createElement('div');
+div.innerHTML=mas2[idd][index2];
+let btn2=document.createElement('button');
+btn2.innerHTML='vb';
+btn2.classList.add('gramatic');btn2.style.backgroundColor='rgba(240, 240, 240,1)';btn2.style.border='2px solid #aaa'
+bol=1;
+let adj=document.createElement('button');
+adj.innerHTML='adj';
+adj.classList.add('gramatic');
+let konj2=document.createElement('button');
+konj2.innerHTML='konj';
+konj2.classList.add('gramatic');
+let minus=document.createElement('button');
+minus.innerHTML='-';
+minus.classList.add('minus');
+let pagination=document.createElement('div');
+pagination.classList.add('scr');
+
+
+let advb=document.createElement('button');
+advb.innerHTML='advb';
+advb.classList.add('gramatic');
+
+
+let prep=document.createElement('button');
+prep.innerHTML='prep';
+prep.classList.add('gramatic');
+
+let btn3=document.createElement('button');
+btn3.innerHTML='ww';
+div.classList.add('scr3');
+document.body.appendChild(btn3);
+
+
+
+let div3=document.createElement('button');
+div3.innerHTML='+';
+div3.classList.add('plus');
+btn2.addEventListener('click',()=>{
+  if(localStorage.getItem('translate')=='ru'){masq=mas2Ru;}else if(localStorage.getItem('translate')=='ua'){masq=mas2Ua;}else{masq=mas2;}bol=1;div.innerHTML=masq[idd][index2];
+ konj2.style.backgroundColor='rgba(255, 255, 255,1)';konj2.style.border='none'
+  adj.style.backgroundColor='rgba(255, 255, 255,1)';adj.style.border='none'
+  advb.style.backgroundColor='rgba(255, 255, 255,1)';advb.style.border='none'
+  btn2.style.backgroundColor='rgba(240, 240, 240,1)';btn2.style.border='2 px solid ';btn2.style.border='2px solid #aaa'
+  prep.style.backgroundColor='rgba(255, 255, 255,1)';prep.style.border='none'
+  if(mas2[idd][1]==0){  pagination.appendChild(div3);
+  pagination.appendChild(minus); }else{  pagination.removeChild(div3);pagination.removeChild(minus);}
+ // document.body.appendChild(div2);
+});
+adj.addEventListener('click',()=>{
+  if(localStorage.getItem('translate')=='ru'){masq=adj2Ru;}else if(localStorage.getItem('translate')=='ua'){masq=adj2Ua;}else{masq=adj2;}bol=2;div.innerHTML=masq[idd][index2];
+ konj2.style.backgroundColor='rgba(255, 255, 255,1)';btn2.style.border='none'
+  adj.style.backgroundColor='rgba(240, 240, 240,1)';adj.style.border='2 px solid ';adj.style.border='2px solid #aaa'
+  advb.style.backgroundColor='rgba(255, 255, 255,1)';advb.style.border='none'
+  btn2.style.backgroundColor='rgba(255, 255, 255,1)';btn2.style.border='none'
+  prep.style.backgroundColor='rgba(255, 255, 255,1)';prep.style.border='none'
+  if(adj2[idd][1]==0){  pagination.appendChild(div3);
+  pagination.appendChild(minus); }else{  pagination.removeChild(div3);pagination.removeChild(minus);}
+ // document.body.appendChild(div2);
+});
+konj2.addEventListener('click',()=>{
+  if(localStorage.getItem('translate')=='ru'){masq=konjru;}else if(localStorage.getItem('translate')=='ua'){masq=konjUa;}else{masq=konjj;}bol=3;div.innerHTML=masq[idd][index2];
+  konj2.style.backgroundColor='rgba(240, 240, 240,1)';konj2.style.border='2 px solid ';konj2.style.border='2px solid #aaa'
+  adj.style.backgroundColor='rgba(255, 255, 255,1)';adj.style.border='none'
+  advb.style.backgroundColor='rgba(255, 255, 255,1)';advb.style.border='none'
+  btn2.style.backgroundColor='rgba(255, 255, 255,1)';btn2.style.border='none'
+  prep.style.backgroundColor='rgba(255, 255, 255,1)';prep.style.border='none'
+ // document.body.appendChild(div2);
+ if(konjj[idd][1]==0){  pagination.appendChild(div3);
+  pagination.appendChild(minus); }else{  pagination.removeChild(div3);pagination.removeChild(minus);}
+});
+advb.addEventListener('click',()=>{
+  if(localStorage.getItem('translate')=='ru'){masq=advb2Ru;}else if(localStorage.getItem('translate')=='ua'){masq=advb2Ua;}else{masq=advb2;}bol=4;div.innerHTML=masq[idd][index2];
+ konj2.style.backgroundColor='rgba(255, 255, 255,1)';konj2.style.border='none'
+  adj.style.backgroundColor='rgba(255, 255, 255,1)';adj.style.border='none'
+  advb.style.backgroundColor='rgba(240, 240, 240,1)';advb.style.border='2 px solid ';advb.style.border='2px solid #aaa'
+  btn2.style.backgroundColor='rgba(255, 255, 255,1)';btn2.style.border='none'
+  prep.style.backgroundColor='rgba(255, 255, 255,1)';prep.style.border='none'
+  if(advb2[idd][1]==0){  pagination.appendChild(div3);
+  pagination.appendChild(minus); }else{  pagination.removeChild(div3);pagination.removeChild(minus);}
+ // document.body.appendChild(div2);
+});
+prep.addEventListener('click',()=>{
+  if(localStorage.getItem('translate')=='ru'){masq=peppRu;}else if(localStorage.getItem('translate')=='ua'){masq=peppUa;}else{masq=prep;}bol=5;div.innerHTML=masq[idd][index2];
+ konj2.style.backgroundColor='rgba(255, 255, 255,1)';konj2.style.border='none'
+  adj.style.backgroundColor='rgba(255, 255, 255,1)';adj.style.border='none'
+  advb.style.backgroundColor='rgba(255, 255, 255,1)';advb.style.border='none'
+  btn2.style.backgroundColor='rgba(255, 255, 255,1)';btn2.style.border='none'
+  prep.style.backgroundColor='rgba(240, 240, 240,1)';prep.style.border='2 px solid ';prep.style.border='2px solid #aaa'
+ // document.body.appendChild(div2);
+});
+div3.addEventListener('click',()=>{
+ index2++;if(index2==masq[idd][1]){index2=masq[idd][1];}div.innerHTML=masq[idd][index2];
+})
+minus.addEventListener('click',()=>{
+ index2--;if(index2<=2){index2=2;}div.innerHTML=masq[idd][index2];
+})
+        btn.addEventListener('click',()=>{document.body.appendChild(pagination);mas[i-=6];
+  if(mas[i]!==0){pagination.appendChild(btn2); }
+ if(advb2[idd][0]==0){ pagination.appendChild(advb);}
+ if(adj2[idd][0]==0){ pagination.appendChild(adj); }
+ if(konjj[idd][0]==0){pagination.appendChild(konj2);}
+ if(pepp[idd][0]==0){  pagination.appendChild(prep);}
+  bol=1;
+  mas[i+=6];
+  
+
+
+   pagination.appendChild(X);
+   pagination.appendChild(div);
+
+          });
+        ii++;}
+
+q.appendChild(labe2l);
+
+      
+      
+   
+}
+
+document.querySelector('#elastic').oninput = function(){
+    let val = this.value.trim();
+    let elasticItems = document.querySelectorAll('.q .container');
+    if (val != ''){
+        elasticItems.forEach(function(elem){
+          if (elem.innerText.search(val) == -1) {
+            elem.classList.add('hide');
+          }
+          else { 
+            elem.classList.remove('hide');
+          }
+        });
+    }
+  }
+
+  function inserMark(string,pos,len ){
+    return string.slice(0, pos)+ '<mark>' + string.slice(pos, pos+len) + '</mark>'+string.slice(pos+len);
+
+  }
+
+
+
+</script>
+
+</body>
+</html>
